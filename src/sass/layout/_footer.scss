@@ -1,0 +1,12 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
+.footer {
+    background-color: var.$rosa;
+    padding: 2rem 0;
+    
+    p {
+        color: var.$blanco;
+        text-align: center;
+    }
+}

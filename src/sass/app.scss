@@ -1,0 +1,9 @@
+//sintaxis anterior de SASS
+// @import 'base/variables';
+// @import 'contenido/contenido';
+
+//sintaxis nueva de SASS
+@use 'base';
+@use 'layout';
+
+

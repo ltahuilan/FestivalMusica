@@ -1,0 +1,55 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
+.video {
+    position: relative;
+    max-height: 60rem;
+    overflow: hidden;
+
+    .overlay {
+        position: absolute;
+        //background: rgb(242,3,193);
+        //background: linear-gradient(90deg, rgba(242,3,193,0.3) 0%, rgba(115,5,240,0.5) 100%);
+
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f203c1+0,7305f0+100&0.3+0,0.5+100 */
+        background: linear-gradient(350deg,  rgba(242,3,193,0.3) 0%,rgba(115,5,240,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: -moz-linear-gradient(350deg,  rgba(242,3,193,0.3) 0%, rgba(115,5,240,0.7) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(350deg,  rgba(242,3,193,0.3) 0%,rgba(115,5,240,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4df203c1', endColorstr='#807305f0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    
+    video {
+        width: 100%;
+        min-width: 60rem;
+        display: block;
+    }
+}
+
+.contenido-video {
+    z-index: 1;
+    h2{
+        color: var.$blanco;
+        margin: 0;
+        font-size: 4rem;
+        @include mix.tablet {
+            font-size: 6rem;            
+        }
+    }
+
+    p {
+        background-color: var.$rosa;
+        display: inline-block;
+        padding: 1rem;
+        border-radius: .3rem;
+        color: var.$blanco;
+        font-size: 2rem;
+    }
+}
+

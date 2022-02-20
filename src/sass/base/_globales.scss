@@ -1,0 +1,72 @@
+@use 'base/variables' as var;
+
+html {
+    font-size: 62.5%; //habilita d¿la equivalencia de 1rem es igual que 10px
+    box-sizing: border-box;
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var.$fuente-principal;
+    font-size: 1.6rem;
+
+    &.fijo {
+        overflow: hidden;
+    }
+
+    &.fix-scroll-nav {
+        padding-top: 6rem;
+    }
+}
+
+p {
+    margin: 0;
+    color: var.$negro;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3, h4 {
+    margin: 0 0 5rem 0;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.navegacion-principal {
+    
+    a {
+        color: var.$blanco;
+        font-size: 2.4rem;
+
+        &:hover {
+            color: var.$amarillo;
+        }
+    }
+}

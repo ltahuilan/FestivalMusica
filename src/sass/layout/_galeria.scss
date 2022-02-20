@@ -1,0 +1,69 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
+.contenedor-galeria {
+    margin: 5rem auto;
+    
+    h3 {
+        text-align: center;
+    }
+}
+
+.galeria-imagenes {
+    list-style: none;
+    padding: 0;
+
+    @include mix.grid(2, 2rem);
+
+    @include mix.telefono {
+        @include mix.grid(3, 2rem);
+    }
+
+    @include mix.tablet {
+        @include mix.grid(4, 2rem);
+    }
+
+    @include mix.desktop {
+        @include mix.grid(6, 2rem);
+    }
+
+    .thumb {
+        max-width: 25rem;
+        margin: 0 auto;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    display: grid;
+    place-items: center;
+
+    picture {
+        display: block;
+        max-width: 80rem;   
+        box-shadow: 0 2px 9px var.$negro;     
+    }
+
+    .btn-cerrar {
+        width: 3rem;
+        height: 3rem;
+        background-color: var.$blanco;
+        border-radius: 50%;
+        font-weight: var.$w-bold;
+        font-size: 2.8rem;
+        display: grid;
+        place-content: center;
+
+        &:hover {
+            cursor: pointer;
+            background-color: darken(var.$blanco, 25%);
+        }
+    }
+}
